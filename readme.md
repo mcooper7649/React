@@ -1,6 +1,8 @@
 ## React
 --
 
+(Code-Sandbox-REACT)[https://codesandbox.com]
+
 - What is React?
     - A JavaScript Library for building user interfaces
         - A Frontend Framework
@@ -20,4 +22,11 @@
 - Component Usefulness
     - Components load their own html/css/js files  
         - This allows the components to update and refresh individually vs the whole page
+            - This makes the app loadfaster and be more interactive
             - This allows platforms to dynamically refresh their components so, things like notifications will pop up now without the need for a user to hit refresh.
+
+
+### Introduction to JSX and Babel
+---
+
+JSX
