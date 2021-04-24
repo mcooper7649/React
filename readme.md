@@ -29,4 +29,27 @@
 ### Introduction to JSX and Babel
 ---
 
-JSX
+(Completed-CodeSandbox)[https://codesandbox.io/s/condescending-brook-xk1cg?file=/public/index.html]
+
+- Getting Started
+    - Head over to codesandbox.io
+    - Create a React BoilerPlate
+        - Inside the body you will have a div with the id of "root"
+        - a ``<script>`` tag linking your javascript   
+            - This should be at the closing body tag
+        - Thats IT, we will now create the rest of our code in the index.js and leave the html file alone
+
+- Configuring the index.js
+    - Add the latest dependencies for react and react-dom
+    - import react and react-dom
+        ```
+        import React from "react";
+        import ReactDOM from "react-dom";
+        ```
+- ReactDOM's structure 
+    - ReactDOM.render(WHAT TO SHOW, WHERE TO SHOW IT)
+    - ReactDOM.render(<h1>Hello World!</h1>, document.getElementById("root"))
+
+
+- What is JSX?
+    - 
