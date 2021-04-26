@@ -163,3 +163,90 @@ ReactDOM.render(
   document.getElementById("root")
 );
 ```
+
+
+### STYLING in REACT 
+---
+
+- JSX renders down to javaScript so when you add the class attribute to your html it gives an error.
+    - In JS you can declare the attribute className, like we seen in our jQuery/DOM modules
+
+- Inside the index.html we should update the script tags type attribute from "text/javascript" to "text/JSX"
+```
+    <script src="../src/index.js" type="text/javascript"></script>
+    <script src="../src/index.js" type="text/JSX"></script>
+```
+- Attributes for HTML in REACT will always need to be in camelCase, for example contentEditable="true".  
+
+
+### STYLING Challenge
+---
+(sandbox-challenge)[https://codesandbox.io/s/funny-merkle-fy4e8]
+1. Find 3 images from Google and add to your index.js
+2. Using classes make the dimensions of the images the same size.
+
+
+### Properties in JSX
+---
+
+1. Properties, such as <h1 style="color:red"> will not render in JSX, as properties need to be passed as objects
+    - Objects are just { key:value} so <h1 style={color:red}> is how the property needs to be passed in jsx
+        - commas will seperate any additional properties in the object unlike the ; in traditional html
+    - Because JSX ALREADY needs {curlybraces} to declare JS then you need to call another object for attributes you will get DOUBLE curly braces
+        - <h1 style = {{color: "red"}}>Hello World</h1>
+
+2. React recommends using CSS stylesheets over inline styling? So why would we need to use it?
+    - Inline Styles allow for styles to be more dynamic for say user interactions or events.
+    
+        
+3. When setting properties, unlike CSS, your value needs to be a string, even if its a number, truthy falsy, border, etc.
+
+
+
+### React Styling Challenge 2
+---
+
+(codesandbox) [https://codesandbox.io/s/react-styling-practice-forked-kxtnm?file=/src/index.js]
+
+//Create a React app from scratch.
+//Show a single h1 that says "Good morning" if between midnight and 12PM.
+//or "Good Afternoon" if between 12PM and 6PM.
+//or "Good evening" if between 6PM and midnight.
+//Apply the "heading" style in the styles.css
+//Dynamically change the color of the h1 using inline css styles.
+//Morning = red, Afternoon = green, Night = blue.
+
+
+```
+import React from "react";
+import ReactDOM from "react-dom";
+
+let date = new Date();
+let time = date.getHours();
+console.log(time);
+let greeting = "";
+
+const customStyle = {
+  color: ""
+};
+
+if (time <= 12) {
+  greeting = "Good morning";
+  customStyle.color = "red";
+} else if (time > 12 && time < 18) {
+  greeting = "Good Afternoon";
+  customStyle.color = "green";
+} else {
+  greeting = "Good evening";
+  customStyle.color = "blue";
+}
+
+ReactDOM.render(
+  <div>
+    <h1 className="heading" style={customStyle}>
+      {greeting}
+    </h1>
+  </div>,
+  document.getElementById("root")
+);
+```
