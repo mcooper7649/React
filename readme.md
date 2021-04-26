@@ -250,3 +250,53 @@ ReactDOM.render(
   document.getElementById("root")
 );
 ```
+
+### React Components
+---
+
+(codesandbox)[https://codesandbox.io/s/elated-meadow-smxwt?file=/src/components/App.jsx]
+
+- Creating components in React allows for your code to be more easily understood and modular. 
+- When creating a component in react, were essentially just creating a function we can recall at a later time.
+    - Use Pascal case, aka Capital case first letter when creating your components
+    - React needs pascal case to interpret
+
+- We can create these functions as seperate files with a .jsx extension.
+    - make sure to import React from 'react" at the top of each component.
+    - using es6 export we want to export our components
+        - export default Heading or Footer or whatever the name of the function without () so it doesn't execute immediately
+
+- Import our component back into a our index.js file to complete the connection
+    - import Heading from "./Heading"
+
+- APP is a common component people create to begin modularizing their project.
+    - Replacing our <div> tags, we would add the <App /> to our ReactDOM.render()
+    - Make sure to import the APP to our injdex.js file too
+
+
+index.js
+```
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+ReactDOM.render(<App />, document.getElementById("root"));
+```
+
+App.jsx
+```
+import React from "react";
+import Heading from "./Heading";
+import List from "./List";
+
+function App() {
+  return (
+    <div>
+      <Heading />
+      <List />
+    </div>
+  );
+}
+
+export default App;
+```
