@@ -52,4 +52,21 @@
 
 
 - What is JSX?
-    - 
+    - React COMPILES JSX that is HTML passed through the body of JavaScript.
+    - Inside REACT is a compiler called BABEL
+
+- What is BABEL?
+    - Babel converts modern code, es6, es7, etc and converts it to older browser compatible code.
+    - Babel converts JSX into plain JavaScript
+        - If you go to babeljs.io you can see how babel converts the jsx into javascript via their web based compiler
+
+- Importing
+    - Import is an es6 release of how we import modules vs declaring vars
+        - Old Style of Import
+        ```Var React = require("react");```
+        ```Var ReactDOM = require("react-dom)```
+        - New Style of Import
+        ```import React from "react"```
+        ```import ReactDOM from "react-dom";```
+    - This makes the dependencies more modular
+    - This also makes the code organized
