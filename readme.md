@@ -70,3 +70,96 @@
         ```import ReactDOM from "react-dom";```
     - This makes the dependencies more modular
     - This also makes the code organized
+
+- The Render Method
+    - ReactDom.render() 
+        - It can only render one tag
+            - Wrap your code in a DIV to render all your tags as one!
+
+- React CHALLENGE CodeSandbox
+    - Create a react app from Scratch
+        - It should have an h1
+        - It should display an unordered list
+        - It should contain 3 list elements
+    - https://codesandbox.io/s/blue-wood-6zz4p?file=/src/index.js:0-248
+
+```
+import React from "react";
+import ReactDOM from "react-dom";
+
+ReactDOM.render(
+  <div>
+    <h1>This is my heading</h1>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+  </div>, document.getElementById("root")
+)
+```
+
+
+### What else can JSX do?
+---
+
+(Sandbox)[https://codesandbox.io/s/javascript-expressions-in-jsx-practice-forked-wl6x9?file=/src/index.js:366-402]
+
+- JSX is HTML that is injected into the JavaScript code
+    - It can also inject JS inside the HTML too 
+        - The code needs to be wrapped in {code}
+    - ANY JS EXPRESSION can be added using the curly braces in JSX
+    - JSX curly braces cannot render STATEMENTS, like IF,ELSEIF
+
+- Using CodeSandbox
+    - Declare a number for the var "Lucky Number"
+    - Call your var using JSX, see if you can get it to render
+    ```
+    let luckyNumber = 7;
+
+    ReactDOM.render(
+    <div>
+        <h1>Hello Michael</h1>
+        <p>Your Lucky Number is {luckyNumber}</p>
+    </div>,
+    document.getElementById("root")
+    )
+    ```
+
+- Template Literals and JSX
+    - in ES6 we learned about template literals which allow you to use backticks `code` 
+    - if Combined with JSX we can interpolate multiple JSX Vars using $ dollar sign
+        `` <h1>Hello {`${fName} ${lName}`}</h1> ``
+
+
+### JSX PRACTICE
+---
+(Sandbox)[https://codesandbox.io/s/javascript-expressions-in-jsx-practice-forked-wkxii?file=/src/index.js:0-207]
+Challenge - 
+        //Create a react app from scratch.
+        //It should display 2 paragraph HTML elements.
+        //The paragraphs should say:
+        //Created by YOURNAME.
+        //Copyright CURRENTYEAR.
+        //E.g.
+        //Created by Angela Yu.
+        //Copyright 2019.
+
+```
+import React from "react";
+import ReactDOM from "react-dom";
+
+let fName = "Michael";
+let lName = "Cooper";
+let d = new Date();
+let date = d.getFullYear();
+
+ReactDOM.render(
+  <div>
+    <p>Created by {`${fName} ${lName}`}</p>
+    <p>Copyright {date}</p>
+  </div>,
+  document.getElementById("root")
+);
+```
