@@ -300,3 +300,28 @@ function App() {
 
 export default App;
 ```
+
+
+
+## ES6 IMPORT/EXPORT MODULES
+--
+
+- In order to understand how the import and export modules work we need to take a look at es6 JavaScript to understand it better
+
+- Importing allows for us to import functionality to our application while keeping the code clean and simple
+    - Example: import PI, {doublePi, triplePi} from "./math.js"
+    - Importing vs Requiring
+        - importing is only about 80% compatible as it is es6 code
+            - without Reacts Babel importing would only hit 80%
+            - When working with node, when in doubt about compatibility, use require
+
+- Exporting allows us to export function, variables or other chunks of code using a couple export options
+    - Default lets export one file as the default file exported and can be imported using a random variable name, if needed
+        - export default defaultFunctionName
+    - Export with curly braces lets you specify function names you want to export and can be imported using only those names
+        - export {secondFunctionName, tripleFunctionName }
+
+- Importing EVERYTHING as an object
+    - You can Ex. import * as pi from "./math.js";
+        - This would import an object that we can tap into using dot notation.
+        - {pi.default} or {pi.triplePi} is how we tap into the object
