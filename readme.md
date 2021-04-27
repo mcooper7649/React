@@ -325,3 +325,13 @@ export default App;
     - You can Ex. import * as pi from "./math.js";
         - This would import an object that we can tap into using dot notation.
         - {pi.default} or {pi.triplePi} is how we tap into the object
+
+
+## ES6 IMPORT/EXPORT Challenge
+--
+
+(complete-sandbox)[https://codesandbox.io/s/es6-importexport-practice-forked-b9dh6?file=/src/calculator.js]
+
+//Import the add, multiply, subtract and divide functions
+//from the calculator.js file.
+//If successful, your website should look the same as the Final.png
