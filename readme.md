@@ -335,3 +335,43 @@ export default App;
 //Import the add, multiply, subtract and divide functions
 //from the calculator.js file.
 //If successful, your website should look the same as the Final.png
+
+
+
+## Local React Environment Setup
+--
+
+(udemy-mac-setup)[https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/17038878#notes]
+
+(changing-node-version)[https://stackoverflow.com/questions/63697030/how-to-i-change-node-version-in-windows]
+*** NPM START in CHROME **** 
+
+- Install Local IDE
+    -  VSCODE installed already
+
+
+1. We need to install NPM, if not already installed before we can setup REACT.
+    - npm --version (installed)
+2. Next we run a series of code in terminal 
+    - npx create-react-app my-app
+    - cd my-app
+    - npm start
+
+3. Create React APP doesn't handle backend logic databases, it just creates the frontend pipeline, so you can use it with any backend you like. 
+    - under the hood it uses Babel and webpack
+
+4. When your ready to deploy to production
+    - npm run build
+    
+5. Remove unnecessary files
+    - From public
+        - remove everything but index.html
+    - From src
+        - remove everything but index.js
+
+6. Remove unnecassary code
+    - In head tag, from all the <link> tags
+    - in the Body, from everything but the root <div>
+    - In index.js delete everything but the two imports of React and ReactDOM
+
+7. add the script tag to connect our index.js and type needs to be "text/jsx"
